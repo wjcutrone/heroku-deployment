@@ -34,6 +34,15 @@ app = Flask(__name__)
 def home():
     return render_template("index.html")
 
+@app.route("/about")
+def about():
+    return render_template("about.html")
+
+@app.route("/insights")
+def insights():
+    return render_template("insights.html")
+
+
 # Create a route to get the user inputs and send them to the model
 @app.route("/", methods=['GET', 'POST'])
 def predict():
