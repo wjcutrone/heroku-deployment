@@ -1,1 +1,2 @@
-# Final-Project
+# Hospital Stay Predictor App
+This repository simply exists to hold just the files needed to deploy our machine learning app on heroku so that our group does not have problems deploying on heroku due to issues with storage space.
