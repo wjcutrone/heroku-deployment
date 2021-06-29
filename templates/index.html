@@ -25,6 +25,9 @@
                 <div class="row">
                     <h3 class="text-center" style="font-size: 5em;">Hospital Stay Predictor</h3>
                     <div class="transbox">
+                        <h5 style="text-align: center">
+                            {{ prediction_result }} {{ prediction }} {{ days }}
+                        </h5>
                         <form id='myForm' method="POST">
                                 <div>
                                     <label for="hospcode">Hospital Code:</label>
@@ -242,9 +245,6 @@
                                     <input type="submit" value="Submit">
                                 </div>
                         </form>
-                        <h5 style="text-align: center">
-                            {{ prediction_result }} {{ prediction }}
-                        </h5>
                     </div>
                 </div>
             </div>

@@ -113,7 +113,7 @@ def predict():
     return render_template("index.html", prediction=prediction, Admission_Deposit=Admission_Deposit, Age=Age, Available_Extra_Rooms_in_Hospital=Available_Extra_Rooms_in_Hospital,
                             Bed_Grade=Bed_Grade, City_Code_Hospital=City_Code_Hospital, City_Code_Patient=City_Code_Patient, Department=Department, Hospital_code=Hospital_code, Hospital_region_code=Hospital_region_code,
                             Hospital_type_code=Hospital_type_code, Severity_of_Illness=Severity_of_Illness, Type_of_Admission=Type_of_Admission, Visitors_with_Patient=Visitors_with_Patient, Ward_Facility_Code=Ward_Facility_Code,
-                            Ward_Type=Ward_Type, newSelectionData=json.dumps(newSelectionData), prediction_result='Your predicted hospital stay (in days):')
+                            Ward_Type=Ward_Type, newSelectionData=json.dumps(newSelectionData), prediction_result='Your predicted hospital stay:', days='days')
 
 
 if __name__ == "__main__":
