@@ -108,7 +108,12 @@ def predict():
     model_1 = load_model('model_1.h5', compile=False)
     prediction = model_1.predict(input_t).argmax()
     prediction = y_translator[str(prediction)]
-    return render_template("index.html", prediction=prediction)
+    newSelectionData = [Hospital_code, Hospital_type_code, City_Code_Hospital, Hospital_region_code, Available_Extra_Rooms_in_Hospital, Department, Ward_Type, Ward_Facility_Code, Bed_Grade, City_Code_Patient, 
+                        Type_of_Admission, Severity_of_Illness, Visitors_with_Patient, Age, Admission_Deposit]
+    return render_template("index.html", prediction=prediction, Admission_Deposit=Admission_Deposit, Age=Age, Available_Extra_Rooms_in_Hospital=Available_Extra_Rooms_in_Hospital,
+                            Bed_Grade=Bed_Grade, City_Code_Hospital=City_Code_Hospital, City_Code_Patient=City_Code_Patient, Department=Department, Hospital_code=Hospital_code, Hospital_region_code=Hospital_region_code,
+                            Hospital_type_code=Hospital_type_code, Severity_of_Illness=Severity_of_Illness, Type_of_Admission=Type_of_Admission, Visitors_with_Patient=Visitors_with_Patient, Ward_Facility_Code=Ward_Facility_Code,
+                            Ward_Type=Ward_Type, newSelectionData=json.dumps(newSelectionData), prediction_result='Your predicted hospital stay (in days):')
 
 
 if __name__ == "__main__":
